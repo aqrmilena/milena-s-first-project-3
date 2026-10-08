@@ -42,28 +42,58 @@ try
                     }
 
                     switch (operation)
+
                     {
                         case 1:
 
                             {
                                 // addition
-                                decimal resultad = 0;
+                                decimal firstnumad;
+                                decimal secondnumad;
                                 decimal numberad;
+                                decimal resultad;
                                 string answersad;
+
+                                Console.WriteLine("Enter first number:");
+
+                                while (!decimal.TryParse(Console.ReadLine(), out firstnumad))
+                                {
+                                    Console.WriteLine("Invalid number. Please try again:");
+                                }
+
+                                Console.WriteLine("Enter second number:");
+
+                                while (!decimal.TryParse(Console.ReadLine(), out secondnumad))
+                                {
+                                    Console.WriteLine("Invalid number. Please try again:");
+                                }
+
+                                resultad = firstnumad + secondnumad;
+
+
                                 do
                                 {
-                                    Console.WriteLine("Enter a number: ");
-                                    while (!decimal.TryParse(Console.ReadLine(), out numberad))
-                                    {
-                                        Console.WriteLine("Invalid number. Please try again: ");
-                                    }
-                                    resultad += numberad;
-                                    Console.WriteLine("Do you want to add another number? y/n");
+                                    Console.WriteLine($"Current result: {resultad}\n" +
+                                    "Do you want to add another number? y/n");
+
                                     answersad = Console.ReadLine()!.ToLower();
+
                                     while (answersad != "y" && answersad != "n")
                                     {
                                         Console.WriteLine("Invalid option. Please write y/n (yes or no):");
                                         answersad = Console.ReadLine()!.ToLower();
+                                    }
+
+                                    if (answersad == "y")
+                                    {
+                                        Console.WriteLine("Enter another number:");
+
+                                        while (!decimal.TryParse(Console.ReadLine(), out numberad))
+                                        {
+                                            Console.WriteLine("Invalid number. Please try again:");
+                                        }
+
+                                        resultad += numberad;
                                     }
                                 }
                                 while (answersad == "y");
@@ -76,33 +106,53 @@ try
 
                             {
                                 // subtraction
-                                decimal resultsub = 0;
+                                decimal firstnumsub;
+                                decimal secondnumsub;
                                 decimal numbersub;
+                                decimal resultsub;
                                 string answersub;
-                                bool firstnum = true;
+
+                                Console.WriteLine("Enter first number:");
+
+                                while (!decimal.TryParse(Console.ReadLine(), out firstnumsub))
+                                {
+                                    Console.WriteLine("Invalid number. Please try again:");
+                                }
+
+                                Console.WriteLine("Enter second number:");
+
+                                while (!decimal.TryParse(Console.ReadLine(), out secondnumsub))
+                                {
+                                    Console.WriteLine("Invalid number. Please try again:");
+                                }
+
+                                resultsub = firstnumsub - secondnumsub;
+
                                 do
                                 {
-                                    Console.WriteLine("Enter a number: ");
-                                    while (!decimal.TryParse(Console.ReadLine(), out numbersub))
-                                    {
-                                        Console.WriteLine("Invalid number. Please try again: ");
-                                    }
-                                    if (firstnum)
-                                    {
-                                        resultsub = numbersub;
-                                        firstnum = false;
-                                    }
-                                    else
-                                    {
-                                        resultsub -= numbersub;
-                                    }
-                                    Console.WriteLine("Do you want to subtract another number? y/n");
+                                    Console.WriteLine($"Current result: {resultsub}\n" +
+                                    "Do you want to subtract another number? y/n");
+
                                     answersub = Console.ReadLine()!.ToLower();
+
                                     while (answersub != "y" && answersub != "n")
                                     {
                                         Console.WriteLine("Invalid option. Please write y/n (yes or no):");
                                         answersub = Console.ReadLine()!.ToLower();
                                     }
+
+                                    if (answersub == "y")
+                                    {
+                                        Console.WriteLine("Enter another number:");
+
+                                        while (!decimal.TryParse(Console.ReadLine(), out numbersub))
+                                        {
+                                            Console.WriteLine("Invalid number. Please try again:");
+                                        }
+
+                                        resultsub -= numbersub;
+                                    }
+
                                 }
                                 while (answersub == "y");
                                 Console.WriteLine($"Result: {resultsub}\n" +
@@ -114,24 +164,54 @@ try
 
                             {
                                 // multiplication
-                                decimal resultmul = 1;
+                                decimal firstnummul;
+                                decimal secondnummul;
                                 decimal numbermul;
+                                decimal resultmul;
                                 string answersmul;
+
+                                Console.WriteLine("Enter first number:");
+
+                                while (!decimal.TryParse(Console.ReadLine(), out firstnummul))
+                                {
+                                    Console.WriteLine("Invalid number. Please try again:");
+                                }
+
+                                Console.WriteLine("Enter second number:");
+
+                                while (!decimal.TryParse(Console.ReadLine(), out secondnummul))
+                                {
+                                    Console.WriteLine("Invalid number. Please try again:");
+                                }
+
+                                resultmul = firstnummul * secondnummul;
+
+
                                 do
                                 {
-                                    Console.WriteLine("Enter a number: ");
-                                    while (!decimal.TryParse(Console.ReadLine(), out numbermul))
-                                    {
-                                        Console.WriteLine("Invalid number. Please try again: ");
-                                    }
-                                    resultmul *= numbermul;
-                                    Console.WriteLine("Do you want to multiply another number? y/n");
+                                    Console.WriteLine($"Current result: {resultmul}\n" +
+                                    "Do you want to multiply another number? y/n");
+
                                     answersmul = Console.ReadLine()!.ToLower();
+
                                     while (answersmul != "y" && answersmul != "n")
                                     {
-                                        Console.WriteLine("Invalid option. Please write y/n (yes or no): ");
+                                        Console.WriteLine("Invalid option. Please write y/n (yes or no):");
                                         answersmul = Console.ReadLine()!.ToLower();
                                     }
+
+                                    if (answersmul == "y")
+                                    {
+                                        Console.WriteLine("Enter another number:");
+
+                                        while (!decimal.TryParse(Console.ReadLine(), out numbermul))
+                                        {
+                                            Console.WriteLine("Invalid number. Please try again:");
+                                        }
+
+                                        resultmul *= numbermul;
+                                    }
+
                                 }
                                 while (answersmul == "y");
 
@@ -144,42 +224,57 @@ try
 
                             {
                                 // division
-                                decimal resultdiv = 0;
+                                decimal firstnumdiv;
+                                decimal secondnumdiv;
                                 decimal numberdiv;
+                                decimal resultdiv;
                                 string answerdiv;
-                                bool firstnumdiv = true;
+
+                                Console.WriteLine("Enter first number:");
+
+                                while (!decimal.TryParse(Console.ReadLine(), out firstnumdiv))
+                                {
+                                    Console.WriteLine("Invalid number. Please try again:");
+                                }
+
+                                Console.WriteLine("Enter second number:");
+
+                                while (!decimal.TryParse(Console.ReadLine(), out secondnumdiv)
+                                       || secondnumdiv == 0)
+                                {
+                                    Console.WriteLine("Invalid number. Division by zero is not allowed:");
+                                }
+
+                                resultdiv = firstnumdiv / secondnumdiv;
+
                                 do
                                 {
-                                    Console.WriteLine("Enter a number: ");
-                                    while (!decimal.TryParse(Console.ReadLine(), out numberdiv))
-                                    {
-                                        Console.WriteLine("Invalid number. Please try again: ");
-                                    }
-                                    if (firstnumdiv)
-                                    {
-                                        resultdiv = numberdiv;
-                                        firstnumdiv = false;
-                                    }
-                                    else
-                                    {
-                                        if (numberdiv == 0)
-                                        {
-                                            Console.WriteLine("Error: Cannot divide by zero.");
-                                        }
-                                        else
-                                        {
-                                            resultdiv /= numberdiv;
-                                        }
-                                    }
-                                    Console.WriteLine("Do you want to divide by another number? y/n");
+                                    Console.WriteLine($"Current result: {resultdiv}\n" +
+                                    "Do you want to divide by another number? y/n");
+
                                     answerdiv = Console.ReadLine()!.ToLower();
+
                                     while (answerdiv != "y" && answerdiv != "n")
                                     {
                                         Console.WriteLine("Invalid option. Please write y/n (yes or no):");
                                         answerdiv = Console.ReadLine()!.ToLower();
                                     }
+
+                                    if (answerdiv == "y")
+                                    {
+                                        Console.WriteLine("Enter another number:");
+
+                                        while (!decimal.TryParse(Console.ReadLine(), out numberdiv)
+                                               || numberdiv == 0)
+                                        {
+                                            Console.WriteLine("Invalid number. Division by zero is not allowed:");
+                                        }
+
+                                        resultdiv /= numberdiv;
+                                    }
                                 }
                                 while (answerdiv == "y");
+
                                 Console.WriteLine($"Result: {resultdiv}\n" +
                                     "---------------------------\n");
                                 break;
@@ -255,7 +350,7 @@ try
                 }
             case 3:
                 {
-                    Console.WriteLine("YOU CHOOSE EXIT!\n" +
+                    Console.WriteLine("YOU CHOSE EXIT!\n" +
             "THANK YOU FOR USING MY PROGRAM, XOXO!!!");
                 }
                 break;
