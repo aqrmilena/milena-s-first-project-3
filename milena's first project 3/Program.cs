@@ -62,7 +62,7 @@ try
                                     answersad = Console.ReadLine()!.ToLower();
                                     while (answersad != "y" && answersad != "n")
                                     {
-                                        Console.WriteLine("Invalid option. Please write yes or no (y/n):");
+                                        Console.WriteLine("Invalid option. Please write y/n (yes or no):");
                                         answersad = Console.ReadLine()!.ToLower();
                                     }
                                 }
@@ -100,7 +100,7 @@ try
                                     answersub = Console.ReadLine()!.ToLower();
                                     while (answersub != "y" && answersub != "n")
                                     {
-                                        Console.WriteLine("Invalid option. Please write yes or no (y/n):");
+                                        Console.WriteLine("Invalid option. Please write y/n (yes or no):");
                                         answersub = Console.ReadLine()!.ToLower();
                                     }
                                 }
@@ -129,7 +129,7 @@ try
                                     answersmul = Console.ReadLine()!.ToLower();
                                     while (answersmul != "y" && answersmul != "n")
                                     {
-                                        Console.WriteLine("Invalid option. Please write yes or no (y/n): ");
+                                        Console.WriteLine("Invalid option. Please write y/n (yes or no): ");
                                         answersmul = Console.ReadLine()!.ToLower();
                                     }
                                 }
@@ -175,7 +175,7 @@ try
                                     answerdiv = Console.ReadLine()!.ToLower();
                                     while (answerdiv != "y" && answerdiv != "n")
                                     {
-                                        Console.WriteLine("Invalid option. Please write yes or no (y/n):");
+                                        Console.WriteLine("Invalid option. Please write y/n (yes or no):");
                                         answerdiv = Console.ReadLine()!.ToLower();
                                     }
                                 }
