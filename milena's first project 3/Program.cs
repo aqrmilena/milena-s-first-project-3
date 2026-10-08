@@ -2,7 +2,7 @@
 
 int choose=0;
 Console.WriteLine("<<<<<WELCOME TO MY PROGRAM!>>>>>\n" +
-"I AM MILENA AND I HOPE YOU ENJOY MY PROGRAM: ");
+"I AM MILENA AND I HOPE YOU ENJOY MY PROGRAM <3!!");
 try
 {
     while (choose != 3)
