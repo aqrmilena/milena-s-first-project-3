@@ -98,6 +98,7 @@ try
                                 }
                                 while (answersad == "y");
                                 Console.WriteLine($"Result: {resultad}\n" +
+                                    "Returning to main menu...\n"+
                                     "---------------------------\n");
                                 break;
                             }
@@ -156,6 +157,7 @@ try
                                 }
                                 while (answersub == "y");
                                 Console.WriteLine($"Result: {resultsub}\n" +
+                                    "Returning to main menu...\n" +
                                     "---------------------------\n");
                                 break;
                             }
@@ -216,6 +218,7 @@ try
                                 while (answersmul == "y");
 
                                 Console.WriteLine($"Result: {resultmul}\n" +
+                                    "Returning to main menu...\n" +
                                     "---------------------------\n");
                                 break;
                             }
@@ -276,6 +279,7 @@ try
                                 while (answerdiv == "y");
 
                                 Console.WriteLine($"Result: {resultdiv}\n" +
+                                    "Returning to main menu...\n" +
                                     "---------------------------\n");
                                 break;
                             }
